@@ -48,7 +48,7 @@ public class HookLoader implements IXposedHookLoadPackage {
             if (hookPkg.contains(lpparam.packageName)) {
                 XSharedPreferences preferences = new XSharedPreferences(BuildConfig.APPLICATION_ID, Constant.HOOK);
                 preferences.reload();
-                boolean aBoolean = preferences.getBoolean(Constant.HOOK, true);
+                boolean aBoolean = preferences.getBoolean(Constant.FLOAT_VIEW, true);
                 Logger.d("HookLoader", "aBoolean:" + aBoolean + "  " + lpparam.packageName);
                 if (aBoolean) {
                     String apkPath = preferences.getString(Constant.APK_DIR, "");
